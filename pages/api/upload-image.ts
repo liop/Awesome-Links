@@ -19,7 +19,7 @@ export default async function handler(
         secretAccessKey: process.env.APP_AWS_SECRET_KEY!,
       },
     });
-    const post = await getSignedUrl(S3, new PutObjectCommand({Bucket: process.env.AWS_S3_BUCKET_NAME, Key: req.query.file}), { expiresIn: 3600 })
+    const post = await getSignedUrl(S3, new PutObjectCommand({Bucket: process.env.AWS_S3_BUCKET_NAME, Key: req.query.file as string}), { expiresIn: 3600 })
     return res.status(200).json({
       url: post,
     });
