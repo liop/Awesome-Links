@@ -41,7 +41,7 @@ const Header = () => {
               <img
                 alt="profile"
                 className="rounded-full w-12 h-12"
-                src={user.picture}
+                src={user.picture ??''}
               />
               <div className="flex items-center justify-center mr-5 capitalize bg-blue-500 py-1 px-3 rounded-md text-white">
               <Link href="/admin">
