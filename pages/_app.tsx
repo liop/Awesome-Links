@@ -1,12 +1,24 @@
+/*
+ * @Date: 2024-04-15 17:09:41
+ * @Description: 功能：
+ */
 import '../styles/tailwind.css';
 import Layout from '../components/Layout';
 import type { AppProps } from 'next/app';
+import { ApolloProvider } from '@apollo/client';
+import apolloClient from '../lib/apollo';
+import { UserProvider } from '@auth0/nextjs-auth0/client'
+
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <Layout>
-      <Component {...pageProps} />
-    </Layout>
+    <UserProvider>
+      <ApolloProvider client={apolloClient}>
+        <Layout>
+          <Component {...pageProps} />
+        </Layout>
+      </ApolloProvider>
+    </UserProvider>
   );
 }
 

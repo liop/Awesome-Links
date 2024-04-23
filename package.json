@@ -8,10 +8,22 @@
     "start": "next start"
   },
   "dependencies": {
+    "@apollo/client": "^3.9.11",
+    "@auth0/nextjs-auth0": "^3.5.0",
+    "@aws-sdk/client-s3": "^3.556.0",
+    "@aws-sdk/s3-request-presigner": "^3.556.0",
+    "@pothos/core": "^3.41.0",
+    "@pothos/plugin-prisma": "^3.65.0",
+    "@pothos/plugin-relay": "^3.46.0",
     "@prisma/client": "^4.8.1",
+    "aws-sdk": "^2.1604.0",
+    "graphql": "^16.8.1",
+    "graphql-yoga": "^5.3.0",
     "next": "^13.1.2",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-hook-form": "^7.51.3",
+    "react-hot-toast": "^2.4.1"
   },
   "devDependencies": {
     "@tailwindcss/forms": "^0.5.3",
