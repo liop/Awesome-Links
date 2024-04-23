@@ -2,9 +2,8 @@
  * @Date: 2024-04-17 22:37:43
  * @Description: 功能：
  */
-import { use } from "react";
 import { builder } from "../builder";
-
+import prisma from "../../lib/prisma"
 builder.prismaObject('Link', {
   fields: (t) => ({
     id: t.exposeID('id'),
